@@ -1,0 +1,11 @@
+.top {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.right {
+
+}
+.bottom {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
