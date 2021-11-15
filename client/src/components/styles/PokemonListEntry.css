@@ -2,9 +2,19 @@
   display: grid;
   grid-template-columns: 25% 50% 25%;
 }
+.ability {
+  width: 50%;
+  height: 40px;
+  margin: auto;
+}
 .sprites {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+.male, .female {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .gender {
   width: 100%;
@@ -16,11 +26,19 @@
   height: 75%;
   margin: auto;
 }
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
 .stats h5 {
-  margin: 5px auto;
-  text-align: right;
+  margin: 5px 0;
 }
 .bottom {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+.move-list {
+  width: 90%;
+  height: 40px;
+  margin: 10px auto;
 }
