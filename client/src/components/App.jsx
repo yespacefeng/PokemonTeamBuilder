@@ -16,7 +16,6 @@ const App = function() {
     axios.get(`/API/v2/pokemon`, {params: {name: name}})
       .then(result => {
         setTeam([...team, result.data]);
-        console.log(result.data.types);
         for (let i = 0; i < result.data.types.length; i++) {
           let type = result.data.types[i].type.name;
           if (!types.includes(type)) {
