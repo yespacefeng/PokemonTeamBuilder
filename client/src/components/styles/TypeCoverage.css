@@ -1,0 +1,7 @@
+#type-coverage {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+h4 {
+  text-align: center;
+}
