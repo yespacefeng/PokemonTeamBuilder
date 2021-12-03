@@ -1,9 +1,16 @@
 #type-coverage {
+  min-width: 200px;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px;
 }
 #type-coverage h4 {
   text-align: center;
-  border: 2px solid black;
-  border-radius: 5px;
+}
+
+.not-included {
+  color: rgba(0, 0, 0, .5);
 }

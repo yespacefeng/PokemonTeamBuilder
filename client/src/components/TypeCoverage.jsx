@@ -1,11 +1,21 @@
 import React from 'react';
 import './styles/TypeCoverage.css';
 
-const TypeCoverage = ({ types }) => (
+const GetTypes = ({ types, allTypes }) => {
+  let result = [];
+  {for (let type in allTypes) {
+    if (types.includes(type)) {
+      result.push(<h4 key={type} className='included'>{type}</h4>)
+    } else {
+      result.push(<h4 key={type} className='not-included'>{type}</h4>)
+    }
+  }}
+  return result;
+}
+
+const TypeCoverage = ({ types, allTypes }) => (
   <div id="type-coverage">
-    {types.map(type => (
-      <h4>{type[0].toUpperCase() + type.slice(1)}</h4>
-    ))}
+    <GetTypes types={types} allTypes={allTypes}/>
   </div>
 )
 

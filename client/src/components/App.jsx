@@ -10,6 +10,14 @@ import PokemonList from './PokemonList';
 const App = function() {
   const [team, setTeam] = useState([]);
   const [types, setTypes] = useState([]);
+  const [allTypes, setAllTypes] = useState({
+    'Normal': false, 'Fire': false, 'Water': false,
+    'Grass': false, 'Electric': false, ' Ice': false,
+    'Fighting': false, 'Poison': false, 'Ground': false,
+    'Flying': false, 'Psychic': false, 'Bug': false,
+    'Rock': false, 'Ghost': false, 'Dark': false,
+    'Dragon':false, 'Steel': false, 'Fairy': false
+  })
 
   const onAddPokemonSubmit = (pokemon) => {
     let name = pokemon.toLowerCase();
@@ -36,7 +44,7 @@ const App = function() {
       <div id='main'>
         <div>
           <AddPokemon onSubmit={onAddPokemonSubmit} />
-          <TypeCoverage types={types}/>
+          <TypeCoverage types={types} allTypes={allTypes}/>
         </div>
         <PokemonList team={team}/>
       </div>
