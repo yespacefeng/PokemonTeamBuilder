@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
-h4 {
+#type-coverage h4 {
   text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
 }

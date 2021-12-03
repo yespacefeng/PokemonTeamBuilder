@@ -16,11 +16,13 @@ const App = function() {
     axios.get(`/API/v2/pokemon`, {params: {name: name}})
       .then(result => {
         setTeam([...team, result.data]);
+        let newTypes = [];
         for (let i = 0; i < result.data.types.length; i++) {
           let type = result.data.types[i].type.name;
           if (!types.includes(type)) {
-            setTypes([...types, type]);
+            newTypes.push(type);
           }
+          setTypes([...types, ...newTypes]);
         }
       })
       .catch(error => {
