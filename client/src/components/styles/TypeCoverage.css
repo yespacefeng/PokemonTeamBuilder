@@ -9,8 +9,15 @@
 }
 #type-coverage h4 {
   text-align: center;
+  width: 60px;
+  border-radius: 5px;
+  margin: 5px auto;
+}
+
+.included {
+  background-color: green;
 }
 
 .not-included {
-  color: rgba(0, 0, 0, .5);
+  background-color: red;
 }
